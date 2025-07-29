@@ -16,3 +16,8 @@ spec:
                   number: 80
             path: /
             pathType: Prefix
+  tls:
+    - hosts:
+      secretName: grafana-tls-secret
+      - grafana.cluster-k3s
+
