@@ -27,10 +27,11 @@ spec:
           kind: PrometheusRule
   values:
     grafana:
+      adminPassword: superduperpassword
       # https://github.com/prometheus-community/helm-charts/issues/2710
       # hmmm
-      admin:
-        existingSecret: grafana-admin-secret
-        passwordKey: admin-password
-      #adminPassword: superduperpassword
+      #admin:
+      #  existingSecret: grafana-admin-secret
+      #  passwordKey: admin-password
+      
 
