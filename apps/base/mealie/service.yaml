@@ -6,5 +6,5 @@ spec:
   ports:
     - port: 9000
   selector:
-    app: linkding
+    app: mealie
   type: ClusterIP
