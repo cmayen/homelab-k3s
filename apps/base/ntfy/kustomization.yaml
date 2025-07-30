@@ -5,7 +5,6 @@ resources:
   - deployment.yaml # deployment definition
   - service.yaml # service connecting pods to cluster network
   - storage.yaml # pvc used to store cache and attachment
-  - ingress.yaml # ingress definition
 configMapGenerator: # will parse config from raw config to configmap,it allows for dynamic reload of application if additional app is deployed ie https://github.com/stakater/Reloader
     - name: server-config
       files: 
