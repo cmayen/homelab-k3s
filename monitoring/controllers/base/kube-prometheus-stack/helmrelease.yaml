@@ -27,6 +27,8 @@ spec:
           kind: PrometheusRule
   values:
     grafana:
+      # https://github.com/prometheus-community/helm-charts/issues/2710
+      # hmmm
       admin:
         existingSecret: grafana-admin-secret
         passwordKey: admin-password
