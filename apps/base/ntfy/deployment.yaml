@@ -45,10 +45,10 @@ spec:
                 name: config-volume # generated vie configMapGenerator from kustomization file
               - mountPath: /var/cache/ntfy
                 name: cache-volume #cache volume mounted to persistent volume
-    volumes:
-      - name: config-volume
-        configMap:  # uses configmap generator to parse server.yml to configmap
-          name: server-config
-      - name: cache-volume
-        persistentVolumeClaim: # stores /cache/ntfy in defined pv
-          claimName: ntfy-pvc
+      volumes:
+        - name: config-volume
+          configMap:  # uses configmap generator to parse server.yml to configmap
+            name: server-config
+        - name: cache-volume
+          persistentVolumeClaim: # stores /cache/ntfy in defined pv
+            claimName: ntfy-pvc
