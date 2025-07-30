@@ -32,7 +32,7 @@ spec:
 
           volumeMounts:
             - name: mealie-data
-              mountPath: /etc/mealie/data
+              mountPath: /app/data
       volumes:
         - name: mealie-data
           persistentVolumeClaim:
