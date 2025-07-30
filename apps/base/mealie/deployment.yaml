@@ -12,10 +12,10 @@ spec:
       labels:
         app: mealie
     spec:
-      #securityContext:
-      #  fsGroup: 33 # www-data group ID
-      #  runAsUser: 33 # www-data user ID
-      #  runAsGroup: 33 # www-data group ID
+      securityContext:
+        fsGroup: 911 # abc group ID
+        runAsUser: 911 # abc user ID
+        runAsGroup: 911 # abc group ID
 
       containers:
         - name: mealie
@@ -27,8 +27,8 @@ spec:
           #  - secretRef:
           #      name: mealie-container-env
 
-          #securityContext:
-          #  allowPrivilegeEscalation: false
+          securityContext:
+            allowPrivilegeEscalation: false
 
           volumeMounts:
             - name: mealie-data
