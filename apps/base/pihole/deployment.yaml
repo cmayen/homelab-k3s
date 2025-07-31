@@ -25,8 +25,8 @@ spec:
       - name: pihole
         image: pihole/pihole:latest
 
-        command: ["pihole"]
-        args: ["setpassword","\"$WEBPASSWORD\""]
+      #  command: ["pihole"]
+      #  args: ["setpassword","\"$WEBPASSWORD\""]
 
       #  securityContext:
       #    allowPrivilegeEscalation: false
