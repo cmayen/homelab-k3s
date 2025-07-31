@@ -28,7 +28,7 @@ spec:
             - name: NTFY_LOG_LEVEL # adjust log level
               value: INFO
             - name: NTFY_BASE_URL # add base url
-              value: ntfy.cluster-k3s 
+              value: http://ntfy.cluster-k3s 
           ports: 
             - containerPort: 80
               name: http-ntfy

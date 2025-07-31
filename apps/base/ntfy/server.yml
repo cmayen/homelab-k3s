@@ -1,4 +1,4 @@
-base-url: "http://ntfy.cluster-k3s"
+base-url: "ntfy.cluster-k3s"
 listen-http: ":80"
 cache-file: "/var/cache/ntfy/cache.db"
 attachment-cache-dir: "/var/cache/ntfy/attachments"
