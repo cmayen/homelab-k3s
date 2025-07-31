@@ -23,7 +23,7 @@ spec:
 
       containers:
       - name: pihole
-        image: pihole/pihole:v6.1.4
+        image: pihole/pihole:latest
 
       #  command: ["pihole"]
       #  args: ["setpassword","\"$WEBPASSWORD\""]
