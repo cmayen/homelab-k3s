@@ -43,8 +43,8 @@ spec:
             - name: audiobookshelf-config
               mountPath: /config
 
-            - name: audiobookshelf-audiobooks
-              mountPath: /audiobooks
+            - name: audiobookshelf-metadata
+              mountPath: /metadata
 
 
       volumes:
