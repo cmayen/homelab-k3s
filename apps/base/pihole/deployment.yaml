@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pihole-deployment
+  namespace: pihole
+  labels:
+    app: pihole
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pihole
+  template:
+    metadata:
+      labels:
+        app: pihole
+    spec:
+
+      securityContext:
+        fsGroup: 1000 # pihole group ID
+        runAsUser: 1000 # pihole user ID
+        runAsGroup: 1000 # pihole group ID
+
+      containers:
+      - name: pihole
+        image: pihole/pihole:latest
+
+        securityContext:
+          allowPrivilegeEscalation: false
+
+        envFrom:
+          - secretRef:
+              name: pihole-container-env
+
+        #env:
+        #- name: TZ
+        #  value: "America/Chicago"
+        #- name: WEBPASSWORD
+        #  value: "superpassword" # Change this to a strong password
+
+        ports:
+        - containerPort: 53
+          protocol: UDP
+        - containerPort: 53
+          protocol: TCP
+        - containerPort: 80
+          protocol: TCP
+        volumeMounts:
+        - name: pihole-storage
+          mountPath: "/etc/pihole"
+        - name: pihole-dnsmasq
+          mountPath: "/etc/dnsmasq.d"
+      volumes:
+      - name: pihole-storage
+        persistentVolumeClaim:
+          claimName: pihole-pvc
+      - name: pihole-dnsmasq
+        emptyDir: {} # For temporary dnsmasq configurations
