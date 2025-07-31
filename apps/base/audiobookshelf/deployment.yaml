@@ -27,7 +27,7 @@ spec:
             #- configMapRef:
             #    name: audiobookshelf-configmap
             - secretRef:
-                name: audiobookshelf-container-env
+                name: audiobookshelf-container-env-secret
 
           #securityContext:
           #  allowPrivilegeEscalation: false
