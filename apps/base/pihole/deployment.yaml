@@ -16,17 +16,17 @@ spec:
         app: pihole
     spec:
 
-      securityContext:
-        fsGroup: 1000 # pihole group ID
-        runAsUser: 1000 # pihole user ID
-        runAsGroup: 1000 # pihole group ID
+      #securityContext:
+      #  fsGroup: 1000 # pihole group ID
+      #  runAsUser: 1000 # pihole user ID
+      #  runAsGroup: 1000 # pihole group ID
 
       containers:
       - name: pihole
         image: pihole/pihole:latest
 
-        securityContext:
-          allowPrivilegeEscalation: false
+      #  securityContext:
+      #    allowPrivilegeEscalation: false
 
         envFrom:
           - secretRef:
