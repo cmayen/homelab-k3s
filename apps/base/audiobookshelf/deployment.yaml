@@ -12,10 +12,10 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-      #securityContext:
-      #  fsGroup: 33 # www-data group ID
-      #  runAsUser: 33 # www-data user ID
-      #  runAsGroup: 33 # www-data group ID
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsGroup: 1000
 
       containers:
         - name: audiobookshelf
@@ -24,13 +24,13 @@ spec:
             - containerPort: 3005
 
           envFrom:
-            #- configMapRef:
-            #    name: audiobookshelf-configmap
+            - configMapRef:
+                name: audiobookshelf-configmap
             - secretRef:
                 name: audiobookshelf-container-env-secret
 
-          #securityContext:
-          #  allowPrivilegeEscalation: false
+          securityContext:
+            allowPrivilegeEscalation: false
 
           volumeMounts:
 
