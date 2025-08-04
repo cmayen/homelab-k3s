@@ -4,3 +4,11 @@
 ---
 
 
+- audiobookshelf
+- linkding
+- mealie
+- ntfy
+- pihole
+- prometheus
+- grafana
+- renovate
