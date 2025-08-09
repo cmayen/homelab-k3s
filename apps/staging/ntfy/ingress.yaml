@@ -5,7 +5,7 @@ metadata:
   namespace: ntfy
 spec:
   rules:
-    - host: ntfy.cluster-k3s.local
+    - host: ntfy.cluster-k3s.internal
       http:
         paths:
           - path: /

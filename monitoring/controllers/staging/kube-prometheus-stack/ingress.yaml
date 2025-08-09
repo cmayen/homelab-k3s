@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: grafana.cluster-k3s
+    - host: grafana.cluster-k3s.internal
       http:
         paths:
           - backend:

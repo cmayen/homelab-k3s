@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: pihole.cluster-k3s.local
+    - host: pihole.cluster-k3s.internal
       http:
         paths:
           - backend:
