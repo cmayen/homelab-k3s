@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: ld.cluster-k3s
+    - host: ld.cluster-k3s.local
       http:
         paths:
           - backend:
