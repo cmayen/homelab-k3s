@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: mealie.cluster-k3s.internal
+    - host: mealie.cluster-k3s
       http:
         paths:
           - backend:
