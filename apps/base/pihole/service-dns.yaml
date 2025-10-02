@@ -17,4 +17,4 @@ spec:
       protocol: TCP
       port: 53
   externalIPs:
-    - 192.168.42.201
+    - 192.168.42.211
